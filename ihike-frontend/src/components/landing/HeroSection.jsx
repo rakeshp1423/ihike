@@ -5,7 +5,10 @@ import { motion, AnimatePresence } from "framer-motion"
 const bgImages = [
   "/images/hero1.jpg",
   "/images/hero2.jpg",
-  "/images/hero3.jpg"
+  "/images/hero3.jpg",
+  "/images/hero4.jpg",
+  "/images/hero5.jpg",
+  "/images/hero6.jpg"
 ]
 
 export default function HeroSection() {

@@ -1,6 +1,7 @@
-import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Mail, Lock, Eye, EyeOff, ArrowLeft } from 'lucide-react';
+import { ArrowLeft, Eye, EyeOff, Lock, Mail } from 'lucide-react';
+import { useState } from 'react';
+import { useNavigate } from 'react-router-dom'; // Add this import
 
 // A simple SVG for the Google icon
 const GoogleIcon = () => (
@@ -14,6 +15,20 @@ const GoogleIcon = () => (
 
 const LoginPage = () => {
   const [showPassword, setShowPassword] = useState(false);
+  const navigate = useNavigate(); // Initialize navigate
+
+  // Handle login form submit
+  const handleLogin = (e) => {
+    e.preventDefault();
+    // Add authentication logic here if needed
+    navigate('/dashboard');
+  };
+
+  // Handle Google login
+  const handleGoogleLogin = () => {
+    // Add Google auth logic here if needed
+    navigate('/dashboard');
+  };
 
   return (
     <div 
@@ -39,7 +54,7 @@ const LoginPage = () => {
           <p className="text-white/80 mt-2">Welcome back, adventurer!</p>
         </div>
 
-        <form onSubmit={(e) => e.preventDefault()}>
+        <form onSubmit={handleLogin}>
           <div className="space-y-6">
             {/* Email Input */}
             <div className="relative">
@@ -92,7 +107,11 @@ const LoginPage = () => {
         </div>
         
         <div className="space-y-4">
-          <button className="w-full flex items-center justify-center gap-3 bg-white/90 text-gray-800 font-semibold py-3 rounded-lg hover:bg-white transition-all">
+          <button
+            type="button"
+            onClick={handleGoogleLogin}
+            className="w-full flex items-center justify-center gap-3 bg-white/90 text-gray-800 font-semibold py-3 rounded-lg hover:bg-white transition-all"
+          >
             <GoogleIcon />
             Continue with Google
           </button>
