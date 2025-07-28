@@ -1,23 +1,36 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Bell, User, Settings, LogOut, ChevronDown, Menu, X } from 'lucide-react';
+import { Bell, User, Settings, LogOut, ChevronDown, Menu, X, CreditCard, CloudSun, Gift } from 'lucide-react';
 
-// Mock user data, to be replaced with actual user data from state/context
+// Mock user data
 const user = {
   name: 'Aarav',
   avatar: 'https://placehold.co/100x100/818CF8/ffffff?text=A',
 };
 
+// Mock notification data
+const notifications = [
+    { id: 1, icon: <CreditCard className="text-green-500" />, text: 'Your payment for Roopkund Trek was successful.', time: '2 hours ago' },
+    { id: 2, icon: <CloudSun className="text-blue-500" />, text: 'Weather alert: Light showers expected in Manali.', time: '1 day ago' },
+    { id: 3, icon: <Gift className="text-yellow-500" />, text: 'You\'ve earned a new badge: "Mountain Goat"!', time: '3 days ago' },
+];
+
 const Navbar = () => {
   const [isProfileOpen, setIsProfileOpen] = useState(false);
+  const [isNotificationOpen, setIsNotificationOpen] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  
   const profileRef = useRef(null);
+  const notificationRef = useRef(null);
 
-  // Close dropdown when clicking outside
+  // Close dropdowns when clicking outside
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (profileRef.current && !profileRef.current.contains(event.target)) {
         setIsProfileOpen(false);
+      }
+      if (notificationRef.current && !notificationRef.current.contains(event.target)) {
+        setIsNotificationOpen(false);
       }
     };
     document.addEventListener('mousedown', handleClickOutside);
@@ -28,7 +41,7 @@ const Navbar = () => {
 
   const navLinks = [
     { title: 'Dashboard', href: '/dashboard' },
-    { title: 'Explore Hikes', href: '/explore' },
+    { title: 'Explore Hikes', href: '/explore-hikes' },
     { title: 'My Bookings', href: '/my-bookings' },
   ];
 
@@ -50,10 +63,39 @@ const Navbar = () => {
         {/* Right Side: Actions and Profile */}
         <div className="flex items-center gap-2">
           <div className="hidden sm:flex items-center gap-2">
-            <button className="p-2 rounded-full text-gray-500 hover:text-gray-800 hover:bg-gray-100 transition-colors relative">
-              <Bell size={20} />
-              <span className="absolute top-2 right-2 block h-2 w-2 rounded-full bg-red-500"></span>
-            </button>
+            
+            {/* Notification Dropdown */}
+            <div className="relative" ref={notificationRef}>
+                <button onClick={() => setIsNotificationOpen(!isNotificationOpen)} className="p-2 rounded-full text-gray-500 hover:text-gray-800 hover:bg-gray-100 transition-colors relative">
+                    <Bell size={20} />
+                    <span className="absolute top-2 right-2 block h-2 w-2 rounded-full bg-red-500"></span>
+                </button>
+                <AnimatePresence>
+                    {isNotificationOpen && (
+                        <motion.div
+                            initial={{ opacity: 0, y: -10, scale: 0.95 }}
+                            animate={{ opacity: 1, y: 0, scale: 1 }}
+                            exit={{ opacity: 0, y: -10, scale: 0.95 }}
+                            className="absolute right-0 mt-2 w-80 bg-white rounded-lg shadow-xl origin-top-right"
+                        >
+                            <div className="p-4 font-bold border-b">Notifications</div>
+                            <div className="py-2">
+                                {notifications.map(notif => (
+                                    <div key={notif.id} className="flex items-start gap-3 px-4 py-3 hover:bg-gray-100">
+                                        <div className="flex-shrink-0 mt-1">{notif.icon}</div>
+                                        <div>
+                                            <p className="text-sm text-gray-700">{notif.text}</p>
+                                            <p className="text-xs text-gray-400 mt-1">{notif.time}</p>
+                                        </div>
+                                    </div>
+                                ))}
+                            </div>
+                            <a href="#" className="block text-center text-sm font-semibold text-green-600 py-2 border-t hover:bg-gray-50">View all notifications</a>
+                        </motion.div>
+                    )}
+                </AnimatePresence>
+            </div>
+
             {/* Profile Dropdown */}
             <div className="relative" ref={profileRef}>
               <button onClick={() => setIsProfileOpen(!isProfileOpen)} className="flex items-center gap-2 p-2 rounded-full hover:bg-gray-100">
@@ -67,7 +109,6 @@ const Navbar = () => {
                     initial={{ opacity: 0, y: -10, scale: 0.95 }}
                     animate={{ opacity: 1, y: 0, scale: 1 }}
                     exit={{ opacity: 0, y: -10, scale: 0.95 }}
-                    transition={{ duration: 0.2, ease: "easeOut" }}
                     className="absolute right-0 mt-2 w-48 bg-white rounded-lg shadow-xl py-2 origin-top-right"
                   >
                     <a href="/profile" className="flex items-center gap-3 px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"><User size={16} /> My Profile</a>

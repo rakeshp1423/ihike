@@ -8,7 +8,7 @@ const blogPosts = [
     category: 'Gear',
     title: 'The Ultimate Packing List for a 3-Day Hike',
     excerpt: 'Never forget a thing. Our comprehensive guide ensures you have everything you need for a short trek.',
-    image: 'https://placehold.co/600x400/10B981/FFFFFF?text=Packing+List',
+    image: 'https://i.pinimg.com/736x/5a/3d/ec/5a3dec4079607dc09653197662975eef.jpg',
     link: '#',
   },
   {
@@ -16,7 +16,7 @@ const blogPosts = [
     category: 'Beginner Tips',
     title: 'Top 5 Beginner Hikes in the Himalayas',
     excerpt: 'New to hiking? These stunning yet manageable trails are the perfect place to start your journey.',
-    image: 'https://placehold.co/600x400/3B82F6/FFFFFF?text=Beginner+Hikes',
+    image: 'https://i.pinimg.com/1200x/61/e8/92/61e8923ec26b470919fa45a28c07e44c.jpg',
     link: '#',
   },
   {
@@ -24,7 +24,7 @@ const blogPosts = [
     category: 'Training',
     title: 'How to Train for a High-Altitude Trek',
     excerpt: 'Prepare your body for the demands of high altitudes with our expert-approved fitness plan.',
-    image: 'https://placehold.co/600x400/8B5CF6/FFFFFF?text=Training',
+    image: 'https://i.pinimg.com/1200x/f6/0b/c4/f60bc4a43f2199b0209da100f2a18aa7.jpg',
     link: '#',
   },
 ];

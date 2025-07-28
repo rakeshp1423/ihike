@@ -5,22 +5,22 @@ import { ArrowRight } from 'lucide-react';
 const categories = [
   {
     name: 'Mountain Peaks',
-    image: 'https://placehold.co/600x800/22C55E/FFFFFF?text=Peaks',
+    image: 'https://i.pinimg.com/1200x/0c/52/ae/0c52ae9947137589b5574a0a515bc451.jpg',
     description: 'Conquer majestic summits and witness breathtaking panoramic views.',
   },
   {
     name: 'Coastal Trails',
-    image: 'https://placehold.co/600x800/3B82F6/FFFFFF?text=Coastal',
+    image: 'https://i.pinimg.com/1200x/d4/e4/63/d4e4633cfec6fe22d49345a67546974a.jpg',
     description: 'Experience the stunning beauty of ocean cliffs and sandy shores.',
   },
   {
     name: 'Forest Walks',
-    image: 'https://placehold.co/600x800/F59E0B/FFFFFF?text=Forests',
+    image: 'https://i.pinimg.com/736x/a1/93/f2/a193f26ad5979420fecc7a339cf09cd5.jpg',
     description: 'Immerse yourself in the tranquility of ancient woods and lush greenery.',
   },
   {
     name: 'Family Friendly',
-    image: 'https://placehold.co/600x800/A855F7/FFFFFF?text=Family',
+    image: 'https://i.pinimg.com/1200x/62/e6/d1/62e6d155ab35ab947bcc29c19ba4f19c.jpg',
     description: 'Easy-going trails perfect for creating lasting memories with loved ones.',
   },
 ];

@@ -12,7 +12,7 @@ const featuredTours = [
     difficulty: 'Challenging',
     rating: 4.9,
     price: '1,200',
-    image: 'https://placehold.co/600x400/34D399/1F2937?text=Everest+Trek',
+    image: 'https://i.pinimg.com/1200x/33/85/c3/3385c3337bd00be5f304f6e34190f1b7.jpg',
   },
   {
     id: 2,
@@ -22,7 +22,7 @@ const featuredTours = [
     difficulty: 'Challenging',
     rating: 4.8,
     price: '1,350',
-    image: 'https://placehold.co/600x400/60A5FA/1F2937?text=Annapurna',
+    image: 'https://i.pinimg.com/1200x/c2/5e/03/c25e03981482da937bd5ba87f33aeb58.jpg',
   },
   {
     id: 3,
@@ -32,7 +32,7 @@ const featuredTours = [
     difficulty: 'Moderate',
     rating: 4.7,
     price: '800',
-    image: 'https://placehold.co/600x400/FBBF24/1F2937?text=Valley+of+Flowers',
+    image: 'https://i.pinimg.com/736x/19/47/b9/1947b9354eb6c7e2f5b43ef004053286.jpg',
   },
 ];
 
