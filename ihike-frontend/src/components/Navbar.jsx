@@ -4,8 +4,8 @@ import { Bell, User, Settings, LogOut, ChevronDown, Menu, X, CreditCard, CloudSu
 
 // Mock user data
 const user = {
-  name: 'Aarav',
-  avatar: 'https://placehold.co/100x100/818CF8/ffffff?text=A',
+  name: 'Anamika',
+  avatar: 'https://i.pinimg.com/736x/57/5a/b3/575ab3182c51aad2bd18b6628c68210b.jpg',
 };
 
 // Mock notification data
@@ -147,7 +147,7 @@ const Navbar = () => {
                     </div>
                     <a href="/profile" className="block px-4 py-2 rounded-md text-gray-700 hover:bg-gray-100">My Profile</a>
                     <a href="/settings" className="block px-4 py-2 rounded-md text-gray-700 hover:bg-gray-100">Settings</a>
-                    <a href="/logout" className="block px-4 py-2 rounded-md text-red-500 font-semibold hover:bg-red-50">Logout</a>
+                    <a href="/" className="block px-4 py-2 rounded-md text-red-500 font-semibold hover:bg-red-50">Logout</a>
                 </div>
             </motion.div>
         )}

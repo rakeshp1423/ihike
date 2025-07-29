@@ -8,9 +8,9 @@ import Footer from '../components/Footer';
 
 // MOCK USER DATA - EXPANDED
 const currentUser = {
-  name: 'Aarav Sharma',
-  email: 'aarav.sharma@example.com',
-  avatar: 'https://placehold.co/128x128/818CF8/ffffff?text=A',
+  name: 'Anamika Das',
+  email: 'anamika.das@example.com',
+  avatar: 'https://i.pinimg.com/736x/57/5a/b3/575ab3182c51aad2bd18b6628c68210b.jpg',
   phone: '+91 9876543210',
   address: '123, Mountain View Rd, Dehradun, Uttarakhand, 248001',
   safetyInfo: {

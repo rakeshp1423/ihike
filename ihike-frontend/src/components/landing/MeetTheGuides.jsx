@@ -4,19 +4,19 @@ import { UserCircle2 } from 'lucide-react'
 
 const guides = [
   {
-    name: 'Aarav Singh',
+    name: 'Khusi Yadav',
     bio: 'Certified mountain guide with over 10 years of experience leading Himalayan treks.',
-    image: 'https://placehold.co/200x200?text=Aarav',
+    image: 'https://i.pinimg.com/736x/b0/30/88/b0308897ab62e254d79853f667410ac6.jpg',
   },
   {
     name: 'Meera Kapoor',
     bio: 'Nature lover and wildlife expert passionate about eco-friendly travel.',
-    image: 'https://placehold.co/200x200?text=Meera',
+    image: 'https://i.pinimg.com/736x/57/5a/b3/575ab3182c51aad2bd18b6628c68210b.jpg',
   },
   {
-    name: 'Dev Joshi',
+    name: 'Misthi Joshi',
     bio: 'Adventure junkie who has summited several 6,000m peaks in Nepal and India.',
-    image: 'https://placehold.co/200x200?text=Dev',
+    image: 'https://i.pinimg.com/736x/8d/4e/7e/8d4e7e76d423d307be0f78ff26636eb1.jpg',
   },
 ]
 

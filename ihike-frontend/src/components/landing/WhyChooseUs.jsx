@@ -29,9 +29,7 @@ const listVariants = {
   hidden: { opacity: 0 },
   visible: {
     opacity: 1,
-    transition: {
-      staggerChildren: 0.3,
-    },
+    transition: { staggerChildren: 0.3 },
   },
 };
 
@@ -40,9 +38,7 @@ const itemVariants = {
   visible: {
     opacity: 1,
     x: 0,
-    transition: {
-      duration: 0.5,
-    },
+    transition: { duration: 0.5 },
   },
 };
 
@@ -60,19 +56,40 @@ const WhyChooseUs = () => {
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          {/* Image Section */}
-          <motion.div 
-            className="relative h-96 lg:h-full w-full"
-            initial={{ opacity: 0, scale: 0.9 }}
+          {/* Video with animated text */}
+          <motion.div
+            className="relative w-full h-96 lg:h-[500px] rounded-xl overflow-hidden shadow-2xl"
+            initial={{ opacity: 0, scale: 0.95 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true, amount: 0.5 }}
             transition={{ duration: 0.7 }}
           >
-            <img 
-              src="https://placehold.co/600x800/10B981/FFFFFF?text=Happy+Hiker" 
-              alt="Happy hiker on a mountain" 
-              className="absolute inset-0 w-full h-full object-cover rounded-xl shadow-2xl"
+            <video
+              src="/ihike.mp4"
+              autoPlay
+              muted
+              loop
+              playsInline
+              className="absolute inset-0 w-full h-full object-cover"
             />
+            <div className="absolute inset-0 bg-black/30 flex flex-col justify-center items-center text-white px-4 text-center">
+              <motion.h3
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.4, duration: 0.6 }}
+                className="text-2xl md:text-3xl font-bold drop-shadow-lg"
+              >
+                Discover the Trails
+              </motion.h3>
+              <motion.p
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.6, duration: 0.6 }}
+                className="mt-2 text-sm md:text-lg max-w-md drop-shadow-lg"
+              >
+                Adventure, safety, and sustainability — all in one unforgettable journey.
+              </motion.p>
+            </div>
           </motion.div>
 
           {/* USP List Section */}

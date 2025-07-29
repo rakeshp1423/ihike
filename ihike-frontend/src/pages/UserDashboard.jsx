@@ -26,7 +26,7 @@ const allHikesForRecommendations = [
 ];
 
 const userData = {
-  name: 'Aarav',
+  name: 'Anamika Das',
   upcomingHikes: [
     {
       id: 1, name: 'Roopkund Trek', location: 'Uttarakhand', startDate: 'Aug 15, 2025',
@@ -36,12 +36,17 @@ const userData = {
       itinerary: [
         { day: 1, title: 'Arrival in Lohajung', description: 'Acclimatization and briefing.' },
         { day: 2, title: 'Trek to Didna Village', description: 'A 6.5km trek through oak and rhododendron forests.' },
+        { day: 3, title: 'Didna to Ali Bugyal', description: 'A steep ascent to the beautiful meadows of Ali Bugyal.' },
+        { day: 4, title: 'Ali Bugyal to Bedni Bugyal', description: 'A gradual ascent to the stunning Bedni Bugyal.' },
+        { day: 5, title: 'Bedni Bugyal to Roopkund', description: 'A 6km trek to the mysterious Roopkund Lake.' },
+        { day: 6, title: 'Return to Bedni Bugyal', description: 'Retracing our steps back.' },
+        { day: 7, title: 'Bedni Bugyal to Lohajung', description: 'Final trek back to Lohajung.' },
       ],
       gearList: [
-        { item: 'Trekking Shoes', required: true }, { item: 'Backpack (50-60L)', required: true },
+        { item: 'Trekking Shoes', required: true }, { item: 'Backpack (50-60L)', required: true }, { item: 'Sleeping Bag', required: true }, { item: 'Trekking Poles', required: false }, { item: 'Water Bottle', required: true }, { item: 'First Aid Kit', required: true }, { item: 'Headlamp', required: true }, { item: 'Multi-tool', required: false },
       ],
       documents: [
-          { name: 'Trek Permit.pdf', link: '#' }, { name: 'Medical_Certificate_Form.pdf', link: '#' },
+          { name: 'Trek Permit.pdf', link: '#' }, { name: 'Medical_Certificate_Form.pdf', link: '#' }, { name: 'Packing_List.pdf', link: '#' }, { name: 'Emergency_Contacts.pdf', link: '#' }, { name: 'Trek Itinerary.pdf', link: '#' }, { name: 'Guide_Information.pdf', link: '#' }, { name: 'Safety_Guidelines.pdf', link: '#' }, { name: 'Weather_Conditions.pdf', link: '#' }, { name: 'Local_Culture_Guide.pdf', link: '#' }, { name: 'Trekking_Tips.pdf', link: '#' }, { name: 'Insurance_Details.pdf', link: '#' }
       ]
     },
   ],
